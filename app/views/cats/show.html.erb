@@ -1,0 +1,11 @@
+<h1><%= @cat.name %></h1>
+<img src=<%= @cat.picture.url(:medium) %> />
+
+<p> Age: <%= @cat.age %> </p>
+<p> Gender: <%= @cat.gender %> </p>
+<p> Fur: <%= @cat.fur_color %> </p>
+
+<%= link_to 'Edit', edit_cat_path(@cat) %> | 
+<%= link_to 'Delete', cat_path(@cat), method: :delete %>
+<hr />
+<%= link_to 'All Cats', cats_path %>
