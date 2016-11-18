@@ -17,18 +17,21 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 # bootstrap front-end framework
 gem 'bootstrap-sass'
-# paperclip for model images
-gem 'paperclip'
 # pagination
 gem 'will_paginate'
 # Devise for user auth
 gem 'devise'
+# cloudinary
+gem 'cloudinary'
+# images upload
+gem 'attachinary'
 
 group :development, :test do
   gem 'pry', platform: :mri
   gem 'faker'
   gem 'populator'
   gem 'annotate'
+  gem 'dotenv-rails'
 end
 
 group :development do

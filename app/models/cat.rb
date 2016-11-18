@@ -16,8 +16,7 @@
 #
 
 class Cat < ApplicationRecord
-	has_attached_file :picture, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
-  validates_attachment_content_type :picture, content_type: /\Aimage\/.*\z/
+	has_attachment :picture, accept: [:jpg, :png, :gif]
   belongs_to :user
   validates_presence_of :name
   validates_inclusion_of :gender, in: %w(male female)
